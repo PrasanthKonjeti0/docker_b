@@ -12,7 +12,11 @@ import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping("/api/portfolio")
-@CrossOrigin(origins = "http://localhost:5173") // frontend origin
+@CrossOrigin(
+    origins = {"http://localhost:5173", "http://localhost:8082"},
+    allowCredentials = "true"
+)
+
 public class PortfolioController {
 
     @Autowired
